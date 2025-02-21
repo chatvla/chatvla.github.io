@@ -1,0 +1,278 @@
+<!-- 方法1：使用<link>标签（在HTML的<head>部分） -->
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;900&display=swap" rel="stylesheet">
+<section class="hero is-fullheight">
+  <div class="hero-body" style="padding: 0;">
+    <div class="grid-container" style="width: 100vw; height: 100vh; position: relative;">
+      <!-- 添加文字覆盖层 -->
+      <div class="typing-overlay">
+        <div class="typing-text">Diffusion-VLA</div>
+      </div>
+      
+      <!-- 原有的视频网格 -->
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+        <!-- 1 -->
+        <!-- <div class="video-title top">Task: aadadadsas</div> hover显示动画 -->
+        <!-- <div class="video-title bottom">下方标题</div> -->
+
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/visual_generalization/stack_cubes_distractor.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/origin_tasks/pick_bread.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/visual_generalization/open_box_distractor.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/origin_tasks/cube_to_right_box.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- 2 -->
+      <div class="grid-item">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/origin_tasks/pick_pot.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/origin_tasks/bussing_table.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/origin_tasks/bpick4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/visual_generalization/pick_tape_with_distractor1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- 3 -->
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+          <video autoplay loop muted playsinline>
+            <source src="./static/videos/origin_tasks/clutter_seen_fsort.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+          <video autoplay loop muted playsinline>
+            <source src="./static/videos/origin_tasks/clutter_mixed_fsort.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+        <video autoplay loop muted playsinline>
+          <source src="./static/videos/visual_generalization/unzipbag_distractor.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+          <video autoplay loop muted playsinline>
+            <source src="./static/videos/visual_generalization/cube_to_left_box_bg.mp4" type="video/mp4">
+          </video>
+      </div>
+      <!-- 4 -->
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+          <video autoplay loop muted playsinline>
+            <source src="./static/videos/origin_tasks/cup_to_down_plate.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+          <video autoplay loop muted playsinline>
+            <source src="./static/videos/visual_generalization/flip_left_pot_distractor.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+          <video autoplay loop muted playsinline>
+            <source src="./static/videos/visual_generalization/cup_to_up_plate_light.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div class="grid-item" style="filter: brightness(1.1) contrast(1.1); ">
+          <video autoplay loop muted playsinline>
+            <source src="./static/videos/visual_generalization/flip_right_pot_distractor.mp4" type="video/mp4">
+          </video>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // 添加打字效果的脚本
+  document.addEventListener('DOMContentLoaded', function() {
+    const text = "Diffusion-VLA";
+    const typingText = document.querySelector('.typing-text');
+    typingText.textContent = ''; // 确保开始时是空的
+    let charIndex = 0;
+    
+    function type() {
+      if (charIndex < text.length) {
+        typingText.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 150);
+      }
+    }
+    
+    setTimeout(type, 1000);
+  });
+</script>
+<style>
+    .hero.is-fullheight {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.text-container {
+  text-align: center;
+  color: white; /* 确保文字在视频上可见 */
+}
+
+.text {
+  font-size: 4rem; /* 根据需要调整字体大小 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影提高可读性 */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3列 */
+  grid-template-rows: repeat(4, 1fr);    /* 3行 */
+  gap: 0px;                              /* 格子之间的间隔 */
+  background-color: #000;                /* 间隔的颜色 */
+  padding: 0;
+  margin: 0;
+}
+
+.typing-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  /* background: rgba(0, 0, 0, 0.3); 半透明背景 */
+  animation: resize 1s forwards;
+}
+@keyframes resize {
+    from { width: 100%; height: 100%; }
+    to { width: 40%; height: 10%; }  /* 使用ch单位，对应字符数量 */
+}
+.typing-text {
+    /* 现代简约风格 */
+    font-family: 'SF Pro Display', 'Doto', 'Arial', sans-serif;
+    background-color: rgba(203, 203, 203, 0);  /* 全透明 */
+    padding: 0px 15px;
+    color: #4f457e;
+    font-size: 5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #3600a2;
+    width: 0;
+    line-height: 70px;
+    animation: typing 2s steps(13) forwards,
+               blink-caret 1s step-end infinite 3.5s,
+               trigger-bg 1s 1.5s forwards;
+    /* 添加文字阴影提高可读性 */
+    text-shadow: 2px 2px 4px rgba(45, 0, 143, 0.5);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 13.5ch }  /* 使用ch单位，对应字符数量 */
+}
+
+@keyframes trigger-bg {
+    to {
+        background-color: rgba(203, 203, 203, 0.6);
+    }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #3600a2 }
+}
+video, img {
+        width: 100%;
+        border-radius: 8px;  /* <-- 这里定义了倒角 */
+    }
+      .wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.grid-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 3;
+  object-fit: cover;
+  /* filter: brightness(1);  增加亮度20% */
+    /* 或者组合使用多个滤镜 */
+
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.grid-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;  /* 使用 fill 以填充整个容器 */
+  display: block;
+  border-radius: 0;
+  z-index: 3;
+  opacity: 0;  /* 初始状态为透明 */
+  animation: fadeIn 1s ease forwards;  /* 淡入动画 */
+  animation-delay: 1s;  /* 延迟2秒后开始动画 */
+}
+
+.video-title {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  font-family: 'SF Pro Display', 'Doto', 'Arial', sans-serif;
+  font-size: 1rem;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-title.top {
+  top: 5px;  /* 上方标题的位置 */
+  left: 5px;
+}
+
+.video-title.bottom {
+  bottom: 5px;  /* 下方标题的位置 */
+  left: 5px;
+}
+
+.grid-item:hover .video-title {
+  opacity: 1;  /* 鼠标悬浮时显示 */
+}
+</style>

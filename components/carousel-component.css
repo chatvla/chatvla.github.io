@@ -1,0 +1,124 @@
+     /* Splide pagination customization */
+     .splide__pagination__page {
+        background: rgb(51, 51, 51);
+    }
+    .splide__pagination__page.is-active {
+        background: rgb(185, 85, 85);
+    }
+
+    /* Ensure videos are displayed side by side */
+    .splide__slide {
+        padding: 0 10px; /* Add some space between slides */
+    }
+
+    .video-container {
+        position: relative;
+    }
+
+    .top-label {
+
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+        background: rgba(255, 255, 255, 0.75);
+        color: #58508d;
+        /* font-family: 'SF Pro Display', 'Doto', 'Arial', sans-serif; */
+        font-weight: 900;
+        font: 1em;
+        padding: 0.2rem;
+        border-radius: 0.4rem;
+    }
+
+    .speed-label {
+
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.75);
+        color: #58508d;
+        /* font-family: 'SF Pro Display', 'Doto', 'Arial', sans-serif; */
+        font-weight: 900;
+        font: 1em;
+        padding: 0.2rem;
+        border-radius: 0.4rem;
+    }
+    /* .top-speed-label {
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.75);
+        color: #58508d;
+        font-family: 'SF Pro Display', 'Doto', 'Arial', sans-serif;
+        font-weight: 900;
+        font: 1.2em;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    } */
+
+    /* Container width control */
+    #carousel_container {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    /* 添加箭头按钮的样式和动画 */
+    .splide__arrow {
+        transition: all 0.3s ease; /* 添加平滑过渡效果 */
+        background: rgba(255, 255, 255, 0.7);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #ee0b0b;
+    }
+
+    .splide__arrow:hover {
+        background: rgba(209, 205, 205, 0.9);
+        transform: translateY(-50%) scale(1.1); /* 悬浮时放大效果 */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+    }
+
+    .splide__arrow--prev {
+        left: -50px;
+    }
+
+    .splide__arrow--next {
+        right: -50px;
+    }
+
+    /* 为所有轮播组件设置箭头样式 */
+    .splide__arrow {
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.7);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #ee0b0b;
+    }
+
+
+    .splide__arrow:hover {
+        background: rgba(209, 205, 205, 0.9);
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .splide__arrow--prev {
+        left: -50px;
+    }
+
+    .splide__arrow--next {
+        right: -50px;
+    }

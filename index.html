@@ -1,3 +1,542 @@
-hihihi
-miaomiao
-hihi
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ChatVLA: Unified Multimodal Understanding and Robot Control \\with Vision-Language-Action Model</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/css/splide.min.css">
+    <link rel="stylesheet" href="components/carousel-component.css">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('header.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Error loading header:', error);
+        });
+    });
+
+</script>
+<script src="components/carousel-component.js"></script>
+<script>
+
+const videoData = {
+    carousel1: [
+        { video: "static/videos/other/1-1.mp4", label: "Remove towel", speed: "4x" },
+        { video: "static/videos/other/1-2.mp4", label: "Hang cup", speed: "4x" },
+        { video: "static/videos/other/1-3.mp4", label: "Soap to box", speed: "4x" },
+        { video: "static/videos/other/1-4.mp4", label: "Pick toothpaste", speed: "4x" },
+    ],
+    carousel2: [
+        { video: "static/videos/other/2-1.mp4", label: "Bread to plate", speed: "4x" },
+        { video: "static/videos/other/2-2.mp4", label: "Pick up the bread", speed: "4x" },
+    ]
+};
+
+  document.addEventListener('DOMContentLoaded', function () {
+    new VideoCarousel('#carousel1', videoData.carousel1, {}, true);
+    new VideoCarousel('#carousel2', videoData.carousel2, {}, false);
+
+
+  });
+</script>
+</head>
+
+<body>
+<!--    <div id="header">-->
+<!--        &lt;!&ndash; header.html 将被加载到这里 &ndash;&gt;-->
+<!--    </div>-->
+
+  <section class="hero" style="padding-top: 0%;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-1 publication-title" style="display: flex; align-items: center;">
+              <span style="margin-left: 1rem;">ChatVLA: Unified Multimodal Understanding and Robot Control with Vision-Language-Action Model</span>
+            </h1>
+              <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="px-2"> Zhongyi Zhou*<sup>,1,2</sup> </span>
+              <span class="px-2"> Yichen Zhu*<sup>,†,1</sup> </span>
+                <span class="px-2"> Minjie Zhu<sup>2</sup> </span>
+              <span class="px-2"> Junjie Wen<sup>2</sup> </span>
+              <span class="px-2">Ning Liu<sup>4</sup></span>
+              <span class="px-2">Zhiyuan Xu<sup>4</sup></span>
+                <br>
+              <span class="px-2"> Weibin Meng<sup>5</sup> </span>
+              <span class="px-2">Ran Cheng<sup>1</sup></span>
+              <span class="px-2">Yaxin Peng<sup>3</sup></span>
+              <span class="px-2">Chaomin Shen<sup>2</sup></span>
+              <span class="px-2">Feifei Feng<sup>1</sup></span>
+
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span style="color: rgb(145, 143, 143);" class="px-4">1. Midea Group</span>
+                    <span style="color: rgb(145, 143, 143);" class="px-4">2. East China Normal University</span>
+                    <span style="color: rgb(145, 143, 143);" class="px-4">3. Shanghai University</span>
+                    <span style="color: rgb(145, 143, 143);" class="px-4">4. Beijing Innovation Center of Humanoid Robotics</span>
+                    <span style="color: rgb(145, 143, 143);" class="px-4">5. Tsinghua University</span>
+                    <span style="color: rgb(106, 101, 101);" class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution.</small></span>
+                    <span style="color: rgb(106, 101, 101);" class="eql-cntrb"><small><br><sup>†</sup>Corresponding author.</small></span>
+
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2502.14420" target=""
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+
+<!--                  &lt;!&ndash; Github link &ndash;&gt;-->
+<!--                  <span class="link-block">-->
+<!--                    <a href="https://chatvla.github.io"-->
+<!--                       class="external-link button is-normal is-rounded is-dark">-->
+<!--                        <span class="icon">-->
+<!--                            <i class="fab fa-github"></i>-->
+<!--                        </span>-->
+<!--                        <span>code</span>-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--                -->
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2502.14420" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+    <div class="container is-max-desktop video-container">
+      <div class="hero-body">
+<!--        <video poster="" id="tree" autoplay muted loop style="-->
+<!--          width: 800px;-->
+<!--          height: 600px;  /* 设置固定高度 */-->
+<!--          object-fit: cover;  /* 覆盖模式,会裁剪掉多余部分 */-->
+<!--          object-position: center;  /* 居中裁剪 */-->
+<!--        ">-->
+<!--          <source src="static/videos/framework_gif.mp4" type="video/mp4">-->
+<!--        </video>-->
+        <img style="width: 1500px;height: 600px;" src="static/images/chatvla_framework_1.jpg" alt="teaser" />
+       <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+    </div>
+</section>
+  <!-- End teaser video -->
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p> In this work, we propose <span class="method-name">ChatVLA</span>, <strong>the first work to unify multimodal understanding and embodied control</strong>.</p>
+            <p>
+              Humans possess a unified cognitive ability to perceive, comprehend, and interact with the physical world. Why can't large language models replicate this holistic understanding?
+              Through a systematic analysis of existing training paradigms in vision-language-action models (VLA), we identify two key challenges: <strong>spurious forgetting</strong>, where robot training overwrites crucial visual-text alignments, and
+              <strong>task interference</strong>, where competing control and understanding tasks degrade performance when trained jointly.
+            </p>
+            <p>
+              To overcome these limitations, we propose <span class="method-name">ChatVLA</span>,
+              a novel framework featuring Phased Alignment Training,
+              which incrementally integrates multimodal data after initial control mastery,
+              and a Mixture-of-Experts architecture to minimize task interference.
+              <span class="method-name">ChatVLA</span> demonstrates competitive performance on visual question-answering datasets and significantly surpasses state-of-the-art vision-language-action (VLA) methods on multimodal understanding benchmarks.  Notably, it achieves a <strong>six</strong> times higher performance on MMMU and scores <strong>47.2</strong> on MMStar with a more parameter-efficient design than ECoT. Furthermore, <span class="method-name">ChatVLA</span> demonstrates superior performance on 25 real-world robot manipulation tasks compared to existing VLA methods like OpenVLA. Our findings highlight the potential of our unified framework for achieving both robust multimodal understanding and effective robot control.
+
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="container has-text-centered">
+        <h2 class="title is-3" style="margin-bottom: 1em;">Demos on Long-Horizon Task with Direct Prompting</h2>
+      </div>
+      <p class="content has-text-justified">
+       Below are three examples of long-horizon tasks with direct prompting.
+      </p >
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <b>User</b>: "Put the spider-man into the drawer." <br><br>
+              <b>Subtasks</b>: <ol>
+                <li>“Open the drawer.”</li>
+                <li>“Put the spider-man into it.”</li>
+                <li>“Close the drawer.” </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <video width="100%" height="100%" controls controlsList="nodownload">
+            <source src="/static/videos/long-horizon/2_1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <b>User</b>: "Stack the building-blocks." <br><br>
+              <b>Subtasks</b>: <ol>
+                <li>“1. Pick up the orange building-block and stack it onto the yellow one.”</li>
+                <li>“2. Pick up the pink building-block and stack it onto the orange one.”</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <video width="100%" height="100%" controls controlsList="nodownload">
+            <source src="/static/videos/long-horizon/3_1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <b>User</b>: "Clean building blocks to the box. " <br><br>
+              <b>Subtasks</b>: <ol>
+                <li>“1. Put the yellow one to the box.”</li>
+                <li>“2. Put the pink one to the box.”</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <video width="100%" height="100%" controls controlsList="nodownload">
+            <source src="/static/videos/long-horizon/4_1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="container has-text-centered">
+        <h2 class="title is-3" style="margin-bottom: 1em;">Demos on Long-Horizon Task with high-level policy model</h2>
+      </div>
+      <p class="content has-text-justified">
+       Below are two examples of long-horizon tasks with high-level policy model.
+      </p >
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <b>User</b>: "Move the block to the basket then put the toy into the drawer." <br><br>
+              <b>Plans</b>: <ol>
+                <li>“Move the orange block to the basket.”</li>
+                <li>“Open the drawer.”</li>
+                <li>“Put the toy into it. ”</li>
+                <li>“Close the drawer.” </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <video width="100%" height="100%" controls controlsList="nodownload">
+            <source src="/static/videos/compo/2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <b>User</b>: "Prepare the breakfast for me." <br><br>
+              <b>Plans</b>: <ol>
+                <li>“Get the plate and place it on the tablecloth. ”</li>
+                <li>"Flip the cup and place it on the tablecloth. "</li>
+              <li>"Move the bread to the plate. "</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <video width="100%" height="100%" controls controlsList="nodownload">
+            <source src="/static/videos/compo/1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser" style="padding-top: 20px;"></section>
+  <div style="text-align: center; ">
+    <h2 class="title is-3">Demos on Other Real-World Tasks</h2>
+    <h3 style="color: rgb(140, 143, 144); margin-bottom: 10px; font-size: 1.5rem; font-weight: bold;">1.Bathroom Tasks</h3>
+    <div id="carousel1"></div>
+    <h3 style="color: rgb(140, 143, 144); margin-top: 10px; font-size: 1.5rem; font-weight: bold;">2.Bussing Table</h3>
+    <div id="carousel2" style="margin-top: 10px;"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/js/splide.min.js"></script>
+</section>
+
+
+
+<section class="hero teaser">
+  <div style="text-align: center; ">
+    <h2 class="title is-3" >Experiments Results</h2>
+
+      </div>
+  <div class="container is-max-desktop" style="text-align: center;">
+    <div class="hero-body">
+      <img style="width: 100%;" src="static/images/vqa.png" alt="teaser" />
+      <h2 class="subtitle has-text-centered"><strong>Experimental Results for Understanding Task.</strong> Evaluation of MLLMs and VLAs on 6 Multimodal Understanding benchmarks and 7 VQA benchmarks.
+The bold denotes top-ranked methods, underlined entries signify secondary performers.
+      </h2>
+    </div>
+    <div class="hero-body">
+      <img style="width: 80%;" src="static/images/long-horizon.png" alt="teaser" />
+      <h2 class="subtitle has-text-centered"><strong>Long-horizon real robot tasks with direct prompting.</strong>The task is completed in a sequence. The Avg. Len. denotes the average success length of the model.
+      </h2>
+    </div>
+    <div class="hero-body">
+      <img style="width: 80%;" src="static/images/high_level.png" alt="teaser" />
+      <h2 class="subtitle has-text-centered"><strong>Long-horizon real robot tasks with high-level policy model.</strong> The task is completed in a sequence. The Avg. Len. denotes the average success length of the model.
+      </h2>
+    </div>
+        <div class="hero-body">
+      <img style="width: 80%;" src="static/images/real_robot.png" alt="teaser" />
+      <h2 class="subtitle has-text-centered"><strong>Real robot multi-tasking.</strong>We evaluated our model in a multi-task setting across diverse scenes, including bathrooms, kitchens,
+and tabletops. The Avg. denotes the average success rate. These tasks also encompassed a range of skills.
+      </h2>
+    </div>
+
+
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<!--BibTex citation -->
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre>-->
+<!--    <code>@article{-->
+<!--    }</code>,-->
+<!--    <code>@article{wen2024tinyvla,-->
+<!--      title={TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation},-->
+<!--      author={Wen, Junjie and Zhu, Yichen and Li, Jinming and Zhu, Minjie and Wu, Kun and Xu, Zhiyuan and Cheng, Ran and Shen, Chaomin and Peng, Yaxin and Feng, Feifei and others},-->
+<!--      journal={arXiv preprint arXiv:2409.12514},-->
+<!--      year={2024}-->
+<!--    }</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the  <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
+  <style>
+   
+    video, img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .wrapper {
+    position: relative;  /* 固定在屏幕上，滚动时不动 */
+    top: 0%;         /* 垂直居中 */
+    left: 40%;        /* 水平居中 */
+    transform: translate(-50%, -50%); /* 调整位置，使得真正居中 */
+    width: 300px;     /* 可以根据需求调整宽度 */
+    padding: 20px;    /* 内边距，给内容一些空间 */
+    }
+    .container {
+        max-width: 80%;
+        margin: auto;
+    }
+    .video-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .video-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px; /* 增加每个视频项之间的间距 */
+    }
+    .description {
+        width: 50%;
+        background-color: #ebf8ff;
+        padding: 15px;
+        border-radius: 5px;
+        margin-right: 20px;
+        margin-bottom: 20px; /* 增加描述框之间的间距 */
+    }
+    .video-container {
+        width: 45%;
+        position: relative;
+    }
+    video, img {
+        width: 100%;
+        border-radius: 8px;
+    }
+        .label {
+        position: absolute;
+        padding: 2px 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 3px;
+        font-size: 12px;
+    }
+    .top-left {
+        top: 5px;
+        left: 5px;
+    }
+    .bottom-right {
+        bottom: 5px;
+        right: 5px;
+    }
+    .method-name {
+    font-style: italic;
+    /* 或者使用特定样式 */
+    color: #3b2c7c;  /* 使用主题色 */
+    font-weight: 500;
+    font-weight: bold;
+}
+
+    strong {
+        font-weight: bold;
+        /* 可选：添加强调色 */
+        color: #3600a2;
+    }
+
+    p {
+        line-height: 1.6;
+        margin-bottom: 1.5em;
+        text-align: justify;
+    }
+    /*设置framework gif的裁剪*/
+    .video-container {
+    max-width: 100%;  /* 调整容器宽度 */
+    margin: auto;
+    }
+
+    .video-container .hero-body {
+        padding: 0;  /* 移除内边距 */
+    }
+
+    .video-container video {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+</style>
+
+   
