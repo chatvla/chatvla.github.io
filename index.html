@@ -242,14 +242,14 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Put the spider-man into the drawer." <br><br>
               <b>Subtasks</b>: <ol>
-                <li>"1. Open the drawer."</li>
-                <li>"2. Put the spider-man into it."</li>
-                <li>"3. Close the drawer." </li>
+                <li>"Open the drawer."</li>
+                <li>"Put the spider-man into it."</li>
+                <li>"Close the drawer." </li>
               </ol>
             </div>
           </div>
         </div>
-        <div class="column">
+        <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload">
             <source src="/static/videos/long-horizon/2_1.mp4" type="video/mp4">
           </video>
@@ -262,13 +262,13 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Stack the building-blocks." <br><br>
               <b>Subtasks</b>: <ol>
-                <li>"1. Pick up the orange building-block and stack it onto the yellow one."</li>
-                <li>"2. Pick up the pink building-block and stack it onto the orange one."</li>
+                <li>"Pick up the orange building-block and stack it onto the yellow one."</li>
+                <li>"Pick up the pink building-block and stack it onto the orange one."</li>
               </ol>
             </div>
           </div>
         </div>
-        <div class="column">
+        <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload">
             <source src="/static/videos/long-horizon/3_1.mp4" type="video/mp4">
           </video>
@@ -280,13 +280,13 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Clean building blocks to the box. " <br><br>
               <b>Subtasks</b>: <ol>
-                <li>"1. Put the yellow one to the box."</li>
-                <li>"2. Put the pink one to the box."</li>
+                <li>"Put the yellow one to the box."</li>
+                <li>"Put the pink one to the box."</li>
               </ol>
             </div>
           </div>
         </div>
-        <div class="column">
+        <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload">
             <source src="/static/videos/long-horizon/4_1.mp4" type="video/mp4">
           </video>
@@ -299,7 +299,7 @@ const videoData = {
   <div class="container is-max-widescreen">
     <div class="rows">
       <div class="container has-text-centered">
-        <h2 class="title is-3" style="margin-bottom: 1em;">Demos on Long-Horizon Task with high-level policy model</h2>
+        <h2 class="title is-3" style="margin-bottom: 1em;">Demos on Long-Horizon Task with High-Level Policy model</h2>
       </div>
       <p class="content has-text-justified">
        Below are two examples of long-horizon tasks with high-level policy model.
@@ -318,7 +318,7 @@ const videoData = {
             </div>
           </div>
         </div>
-        <div class="column">
+        <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload">
             <source src="/static/videos/compo/2.mp4" type="video/mp4">
           </video>
@@ -338,7 +338,7 @@ const videoData = {
             </div>
           </div>
         </div>
-        <div class="column">
+        <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload">
             <source src="/static/videos/compo/1.mp4" type="video/mp4">
           </video>
@@ -363,34 +363,36 @@ const videoData = {
 
 
 
-<section class="hero teaser">
+<section class="hero teaser" style="padding-top: 50px;">
   <div style="text-align: center; ">
-    <h2 class="title is-3" >Experiments Results</h2>
+    <h2 class="title is-3" >Experiments Results for Understanding Task</h2>
 
       </div>
   <div class="container is-max-desktop" style="text-align: center;">
     <div class="hero-body">
-      <img style="width: 100%;" src="static/images/vqa.png" alt="teaser" />
-      <h2 class="subtitle has-text-centered"><strong>Experimental Results for Understanding Task.</strong> Evaluation of MLLMs and VLAs on 6 Multimodal Understanding benchmarks and 7 VQA benchmarks.
-The bold denotes top-ranked methods, underlined entries signify secondary performers.
+
+      <h2 class="subtitle has-text-centered">
+        Evaluation of MLLMs and VLAs on 6 Multimodal Understanding benchmarks and 7 VQA benchmarks.
+
+        The bold denotes top-ranked methods, underlined entries signify secondary performers.
       </h2>
+      <img style="width: 25%;height: 100%" src="static/images/vqa_fig.png" alt="teaser" />
+      <img style="width: 60%;height: 100%" src="static/images/vqa.png" alt="teaser" />
     </div>
-    <div class="hero-body">
-      <img style="width: 80%;" src="static/images/long-horizon.png" alt="teaser" />
-      <h2 class="subtitle has-text-centered"><strong>Long-horizon real robot tasks with direct prompting.</strong>The task is completed in a sequence. The Avg. Len. denotes the average success length of the model.
-      </h2>
-    </div>
-    <div class="hero-body">
-      <img style="width: 80%;" src="static/images/high_level.png" alt="teaser" />
-      <h2 class="subtitle has-text-centered"><strong>Long-horizon real robot tasks with high-level policy model.</strong> The task is completed in a sequence. The Avg. Len. denotes the average success length of the model.
-      </h2>
-    </div>
+   </div>
+</section>
+<section class="hero teaser" style="padding-top: 50px;">
+  <div style="text-align: center; ">
+    <h2 class="title is-3" >Experiments Results for Real Robot Tasks</h2>
+
+      </div>
+  <div class="container is-max-desktop" style="text-align: center;">
         <div class="hero-body">
-      <img style="width: 80%;" src="static/images/real_robot.png" alt="teaser" />
-      <h2 class="subtitle has-text-centered"><strong>Real robot multi-tasking.</strong>We evaluated our model in a multi-task setting across diverse scenes, including bathrooms, kitchens,
-and tabletops. The Avg. denotes the average success rate. These tasks also encompassed a range of skills.
-      </h2>
+      <img style="width: 80%;" src="static/images/mani.png" alt="teaser" />
     </div>
+   </div>
+</section>
+
 
 
   </div>
