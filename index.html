@@ -77,14 +77,20 @@ const videoData = {
         { video: "static/videos/other/1-4.mp4", label: "Pick toothpaste", speed: "4x" },
     ],
     carousel2: [
-        { video: "static/videos/other/2-1.mp4", label: "Bread to plate", speed: "4x" },
-        { video: "static/videos/other/2-2.mp4", label: "Pick up the bread", speed: "4x" },
+        { video: "static/videos/other/2-1.mp4", label: "Bread -> plate", speed: "4x" },
+        { video: "static/videos/other/2-2.mp4", label: "Pick bread", speed: "4x" },
+    ],
+    carousel3: [
+        { video: "static/videos/other/3-1.mp4", label: "Bread -> empty plate", speed: "4x" },
+        { video: "static/videos/other/3-2.mp4", label: "Tennis -> tennis can", speed: "4x" },
+        { video: "static/videos/other/3-3.mp4", label: "Take away the lid", speed: "4x" },
     ]
 };
 
   document.addEventListener('DOMContentLoaded', function () {
     new VideoCarousel('#carousel1', videoData.carousel1, {}, true);
-    new VideoCarousel('#carousel2', videoData.carousel2, {}, false);
+    new VideoCarousel('#carousel2', videoData.carousel2, {}, true);
+    new VideoCarousel('#carousel3', videoData.carousel3, {}, true);
 
 
   });
@@ -126,6 +132,7 @@ const videoData = {
                     <span style="color: rgb(145, 143, 143);" class="px-4">1. Midea Group</span>
                     <span style="color: rgb(145, 143, 143);" class="px-4">2. East China Normal University</span>
                     <span style="color: rgb(145, 143, 143);" class="px-4">3. Shanghai University</span>
+                    <br>
                     <span style="color: rgb(145, 143, 143);" class="px-4">4. Beijing Innovation Center of Humanoid Robotics</span>
                     <span style="color: rgb(145, 143, 143);" class="px-4">5. Tsinghua University</span>
                     <span style="color: rgb(106, 101, 101);" class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution.</small></span>
@@ -180,19 +187,16 @@ const videoData = {
 
 <!-- Teaser video-->
 <section class="hero teaser">
-    <div class="container is-max-desktop video-container">
+    <div class="container is-max-desktop">
       <div class="hero-body">
-<!--        <video poster="" id="tree" autoplay muted loop style="-->
-<!--          width: 800px;-->
-<!--          height: 600px;  /* 设置固定高度 */-->
-<!--          object-fit: cover;  /* 覆盖模式,会裁剪掉多余部分 */-->
-<!--          object-position: center;  /* 居中裁剪 */-->
-<!--        ">-->
-<!--          <source src="static/videos/framework_gif.mp4" type="video/mp4">-->
-<!--        </video>-->
-        <img style="width: 1500px;height: 600px;" src="static/images/chatvla_framework_1.jpg" alt="teaser" />
-       <h2 class="subtitle has-text-centered">
-        </h2>
+        <img src="static/images/chatvla_framework_1.jpg" alt="teaser" style="
+          width: auto;           
+          max-width: 80%;
+          height: auto;          
+          margin: 0 auto;        
+          display: block;       
+          border-radius: 8px;    
+        "/>
       </div>
     </div>
 </section>
@@ -219,7 +223,7 @@ const videoData = {
               a novel framework featuring Phased Alignment Training,
               which incrementally integrates multimodal data after initial control mastery,
               and a Mixture-of-Experts architecture to minimize task interference.
-              <span class="method-name">ChatVLA</span> demonstrates competitive performance on visual question-answering datasets and significantly surpasses state-of-the-art vision-language-action (VLA) methods on multimodal understanding benchmarks.  Notably, it achieves a <strong>six</strong> times higher performance on MMMU and scores <strong>47.2</strong> on MMStar with a more parameter-efficient design than ECoT. Furthermore, <span class="method-name">ChatVLA</span> demonstrates superior performance on 25 real-world robot manipulation tasks compared to existing VLA methods like OpenVLA. Our findings highlight the potential of our unified framework for achieving both robust multimodal understanding and effective robot control.
+              <span class="method-name">ChatVLA</span> demonstrates competitive performance on visual question-answering datasets and significantly surpasses state-of-the-art vision-language-action (VLA) methods on multimodal understanding benchmarks.  Notably, it achieves a <strong>six</strong> times higher performance on MMMU and scores <strong>47.2</strong> on MMStar with a more parameter-efficient design than ECoT. Furthermore, <span class="method-name">ChatVLA</span> demonstrates superior performance on <strong>25</strong> real-world robot manipulation tasks compared to existing VLA methods like OpenVLA. Our findings highlight the potential of our unified framework for achieving both robust multimodal understanding and effective robot control.
 
             </p>
         </div>
@@ -250,7 +254,7 @@ const videoData = {
           </div>
         </div>
         <div class="column is-5">
-          <video width="100%" height="100%" controls controlsList="nodownload">
+          <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
             <source src="/static/videos/long-horizon/2_1.mp4" type="video/mp4">
           </video>
         </div>
@@ -269,7 +273,7 @@ const videoData = {
           </div>
         </div>
         <div class="column is-5">
-          <video width="100%" height="100%" controls controlsList="nodownload">
+          <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
             <source src="/static/videos/long-horizon/3_1.mp4" type="video/mp4">
           </video>
         </div>
@@ -287,7 +291,7 @@ const videoData = {
           </div>
         </div>
         <div class="column is-5">
-          <video width="100%" height="100%" controls controlsList="nodownload">
+          <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
             <source src="/static/videos/long-horizon/4_1.mp4" type="video/mp4">
           </video>
         </div>
@@ -319,7 +323,7 @@ const videoData = {
           </div>
         </div>
         <div class="column is-5">
-          <video width="100%" height="100%" controls controlsList="nodownload">
+          <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
             <source src="/static/videos/compo/2.mp4" type="video/mp4">
           </video>
         </div>
@@ -339,7 +343,7 @@ const videoData = {
           </div>
         </div>
         <div class="column is-5">
-          <video width="100%" height="100%" controls controlsList="nodownload">
+          <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
             <source src="/static/videos/compo/1.mp4" type="video/mp4">
           </video>
         </div>
@@ -356,6 +360,8 @@ const videoData = {
     <div id="carousel1"></div>
     <h3 style="color: rgb(140, 143, 144); margin-top: 10px; font-size: 1.5rem; font-weight: bold;">2.Kitchen Tasks</h3>
     <div id="carousel2" style="margin-top: 10px;"></div>
+    <h3 style="color: rgb(140, 143, 144); margin-top: 10px; font-size: 1.5rem; font-weight: bold;">3.Tabletop Tasks</h3>
+    <div id="carousel3" style="margin-top: 10px;"></div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/js/splide.min.js"></script>
@@ -370,14 +376,18 @@ const videoData = {
       </div>
   <div class="container is-max-desktop" style="text-align: center;">
     <div class="hero-body">
-
       <h2 class="subtitle has-text-centered">
-        Evaluation of MLLMs and VLAs on 6 Multimodal Understanding benchmarks and 7 VQA benchmarks.
-
-        The bold denotes top-ranked methods, underlined entries signify secondary performers.
+        Evaluation of MLLMs and VLAs on <strong>6 Multimodal Understanding benchmarks and 7 VQA benchmarks</strong>.
       </h2>
       <img style="width: 25%;height: 100%" src="static/images/vqa_fig.png" alt="teaser" />
       <img style="width: 60%;height: 100%" src="static/images/vqa.png" alt="teaser" />
+
+      <h2>
+        ChatVLA demonstrates competitive performance relative to existing VLMs across multiple benchmarks.
+        Specifically, ChatVLA outperforms ECoT and DiVLA by relative improvements of 9.2x and 9.5x over these baseline models.
+        <br>
+        On the MMStar benchmark, ChatVLA attains a score of 37.4, demonstrating 2.2x and 6.9x performance enhancements over DiVLA and ECoT respectively.
+      </h2>
     </div>
    </div>
 </section>
@@ -388,33 +398,33 @@ const videoData = {
       </div>
   <div class="container is-max-desktop" style="text-align: center;">
         <div class="hero-body">
-      <img style="width: 80%;" src="static/images/mani.png" alt="teaser" />
+          <h2 class="subtitle has-text-centered">
+            Evaluation VLAs on <strong>25 real-world robot control tasks across diverse scenes</strong>.
+          </h2>
+          <img style="width: 80%;" src="static/images/mani.png" alt="teaser" />
+          <h2>We conducted 528 trials on a real robot to evaluate ChatVLA's ability. ChatVLA outperforms OpenVLA and ECoT with
+            3.5x fewer parameters on 25 real-world robot control tasks across diverse scenes.
+          </h2>
     </div>
    </div>
 </section>
 
 
-
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre>
+    <code>@misc{zhou2025chatvlaunifiedmultimodalunderstanding,
+      title={ChatVLA: Unified Multimodal Understanding and Robot Control with Vision-Language-Action Model},
+      author={Zhongyi Zhou and Yichen Zhu and Minjie Zhu and Junjie Wen and Ning Liu and Zhiyuan Xu and Weibin Meng and Ran Cheng and Yaxin Peng and Chaomin Shen and Feifei Feng},
+      year={2025},
+      eprint={2502.14420},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2502.14420},
+      }</code></pre>
   </div>
 </section>
-<!--End BibTex citation -->
-
-
-<!--BibTex citation -->
-<!--<section class="section" id="BibTeX">-->
-<!--  <div class="container is-max-desktop content">-->
-<!--    <h2 class="title">BibTeX</h2>-->
-<!--    <pre>-->
-<!--    <code>@article{-->
-<!--    }</code>,-->
-<!--    <code>@article{wen2024tinyvla,-->
-<!--      title={TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation},-->
-<!--      author={Wen, Junjie and Zhu, Yichen and Li, Jinming and Zhu, Minjie and Wu, Kun and Xu, Zhiyuan and Cheng, Ran and Shen, Chaomin and Peng, Yaxin and Feng, Feifei and others},-->
-<!--      journal={arXiv preprint arXiv:2409.12514},-->
-<!--      year={2024}-->
-<!--    }</code></pre>-->
-<!--  </div>-->
-<!--</section>-->
 
   <footer class="footer">
   <div class="container">

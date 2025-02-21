@@ -1,4 +1,7 @@
      /* Splide pagination customization */
+     .splide__pagination {
+        display: none;
+     }
      .splide__pagination__page {
         background: rgb(51, 51, 51);
     }
@@ -76,6 +79,7 @@
         transform: translateY(-50%);
         font-size: 20px;
         color: #ee0b0b;
+        display: none;
     }
 
     .splide__arrow:hover {
