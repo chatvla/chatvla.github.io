@@ -242,9 +242,9 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Put the spider-man into the drawer." <br><br>
               <b>Subtasks</b>: <ol>
-                <li>“Open the drawer.”</li>
-                <li>“Put the spider-man into it.”</li>
-                <li>“Close the drawer.” </li>
+                <li>"1. Open the drawer."</li>
+                <li>"2. Put the spider-man into it."</li>
+                <li>"3. Close the drawer." </li>
               </ol>
             </div>
           </div>
@@ -262,8 +262,8 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Stack the building-blocks." <br><br>
               <b>Subtasks</b>: <ol>
-                <li>“1. Pick up the orange building-block and stack it onto the yellow one.”</li>
-                <li>“2. Pick up the pink building-block and stack it onto the orange one.”</li>
+                <li>"1. Pick up the orange building-block and stack it onto the yellow one."</li>
+                <li>"2. Pick up the pink building-block and stack it onto the orange one."</li>
               </ol>
             </div>
           </div>
@@ -280,8 +280,8 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Clean building blocks to the box. " <br><br>
               <b>Subtasks</b>: <ol>
-                <li>“1. Put the yellow one to the box.”</li>
-                <li>“2. Put the pink one to the box.”</li>
+                <li>"1. Put the yellow one to the box."</li>
+                <li>"2. Put the pink one to the box."</li>
               </ol>
             </div>
           </div>
@@ -310,10 +310,10 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Move the block to the basket then put the toy into the drawer." <br><br>
               <b>Plans</b>: <ol>
-                <li>“Move the orange block to the basket.”</li>
-                <li>“Open the drawer.”</li>
-                <li>“Put the toy into it. ”</li>
-                <li>“Close the drawer.” </li>
+                <li>"Move the orange block to the basket."</li>
+                <li>"Open the drawer."</li>
+                <li>"Put the toy into it. "</li>
+                <li>"Close the drawer." </li>
               </ol>
             </div>
           </div>
@@ -331,7 +331,7 @@ const videoData = {
             <div class="card-content">
               <b>User</b>: "Prepare the breakfast for me." <br><br>
               <b>Plans</b>: <ol>
-                <li>“Get the plate and place it on the tablecloth. ”</li>
+                <li>"Get the plate and place it on the tablecloth. "</li>
                 <li>"Flip the cup and place it on the tablecloth. "</li>
               <li>"Move the bread to the plate. "</li>
               </ol>
@@ -354,7 +354,7 @@ const videoData = {
     <h2 class="title is-3">Demos on Other Real-World Tasks</h2>
     <h3 style="color: rgb(140, 143, 144); margin-bottom: 10px; font-size: 1.5rem; font-weight: bold;">1.Bathroom Tasks</h3>
     <div id="carousel1"></div>
-    <h3 style="color: rgb(140, 143, 144); margin-top: 10px; font-size: 1.5rem; font-weight: bold;">2.Bussing Table</h3>
+    <h3 style="color: rgb(140, 143, 144); margin-top: 10px; font-size: 1.5rem; font-weight: bold;">2.Kitchen Tasks</h3>
     <div id="carousel2" style="margin-top: 10px;"></div>
   </div>
 
@@ -535,6 +535,47 @@ and tabletops. The Avg. denotes the average success rate. These tasks also encom
         width: 100%;
         display: block;
         margin: 0 auto;
+    }
+
+    .splide__track {
+        display: flex !important;
+    }
+
+    .splide__list {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 10px; /* 视频之间的间距 */
+        width: 100% !important;
+        transform: none !important;
+    }
+
+    .splide__slide {
+        flex: 0 0 calc(25% - 8px) !important; /* 4个视频等宽排列,减去间距 */
+        max-width: calc(25% - 8px) !important;
+        position: relative !important;
+    }
+
+    /* 确保视频容器和视频本身填充整个空间 */
+    .video-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    .video-wrapper video {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 标签样式调整 */
+    .video-label {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 12px;
     }
 
 </style>
