@@ -189,14 +189,22 @@ const videoData = {
 <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/chatvla_framework_1.jpg" alt="teaser" style="
-          width: auto;           
-          max-width: 80%;
-          height: auto;          
-          margin: 0 auto;        
-          display: block;       
-          border-radius: 8px;    
-        "/>
+        <video poster="" id="tree" autoplay muted loop style="
+          width: 1200px;
+          height: auto;  /* 设置固定高度 */
+          object-fit: cover;  /* 覆盖模式,会裁剪掉多余部分 */
+          object-position: center;  /* 居中裁剪 */
+        ">
+          <source src="static/videos/ChatVLADemoForWeb.mp4" type="video/mp4">
+        </video>
+<!--        <img src="static/images/chatvla_framework_1.jpg" alt="teaser" style="-->
+<!--          width: auto;           -->
+<!--          max-width: 80%;-->
+<!--          height: auto;          -->
+<!--          margin: 0 auto;        -->
+<!--          display: block;       -->
+<!--          border-radius: 8px;    -->
+<!--        "/>-->
       </div>
     </div>
 </section>
