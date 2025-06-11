@@ -158,18 +158,15 @@ const videoData = {
                     </span>
 
 
-<!--                  &lt;!&ndash; Github link &ndash;&gt;-->
-<!--                  <span class="link-block">-->
-<!--                    <a href="https://chatvla.github.io"-->
-<!--                       class="external-link button is-normal is-rounded is-dark">-->
-<!--                        <span class="icon">-->
-<!--                            <i class="fab fa-github"></i>-->
-<!--                        </span>-->
-<!--                        <span>code</span>-->
-<!--                    </a>-->
-<!--                </span>-->
-<!--                -->
-
+                    <span class="link-block">
+                      <a href="https://github.com/tutujingyugang1/ChatVLA_public"
+                         class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                              <i class="fab fa-github"></i>
+                          </span>
+                          <span>code</span>
+                      </a>
+                  </span>
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2502.14420" target="_blank"
@@ -202,11 +199,13 @@ const videoData = {
 <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <video poster="" id="tree" autoplay muted loop style="
-          width: 1200px;
-          height: auto;  /* 设置固定高度 */
-          object-fit: cover;  /* 覆盖模式,会裁剪掉多余部分 */
-          object-position: center;  /* 居中裁剪 */
+        <video poster="" id="tree" controls style="
+          width: 800px;
+          height: auto;
+          object-fit: cover;
+          object-position: center;
+          margin: 0 auto;
+          display: block;
         ">
           <source src="static/videos/ChatVLADemoForWeb.mp4" type="video/mp4">
         </video>
