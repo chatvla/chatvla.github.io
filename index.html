@@ -71,19 +71,19 @@
 
 const videoData = {
     carousel1: [
-        { video: "static/videos/other/1-1.mp4", label: "Remove towel", speed: "4x" },
-        { video: "static/videos/other/1-2.mp4", label: "Hang cup", speed: "4x" },
-        { video: "static/videos/other/1-3.mp4", label: "Soap to box", speed: "4x" },
-        { video: "static/videos/other/1-4.mp4", label: "Pick toothpaste", speed: "4x" },
+        { video: "static/videos/other/1-1_h264.mp4", label: "Remove towel", speed: "4x" },
+        { video: "static/videos/other/1-2_h264.mp4", label: "Hang cup", speed: "4x" },
+        { video: "static/videos/other/1-3_h264.mp4", label: "Soap to box", speed: "4x" },
+        { video: "static/videos/other/1-4_h264.mp4", label: "Pick toothpaste", speed: "4x" },
     ],
     carousel2: [
-        { video: "static/videos/other/2-1.mp4", label: "Bread -> plate", speed: "4x" },
-        { video: "static/videos/other/2-2.mp4", label: "Pick bread", speed: "4x" },
+        { video: "static/videos/other/2-1_h264.mp4", label: "Bread -> plate", speed: "4x" },
+        { video: "static/videos/other/2-2_h264.mp4", label: "Pick bread", speed: "4x" },
     ],
     carousel3: [
-        { video: "static/videos/other/3-1.mp4", label: "Bread -> empty plate", speed: "4x" },
-        { video: "static/videos/other/3-2.mp4", label: "Tennis -> tennis can", speed: "4x" },
-        { video: "static/videos/other/3-3.mp4", label: "Take away the lid", speed: "4x" },
+        { video: "static/videos/other/3-1_h264.mp4", label: "Bread -> empty plate", speed: "4x" },
+        { video: "static/videos/other/3-2_h264.mp4", label: "Tennis -> tennis can", speed: "4x" },
+        { video: "static/videos/other/3-3_h264.mp4", label: "Take away the lid", speed: "4x" },
     ]
 };
 
@@ -199,13 +199,15 @@ const videoData = {
 <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <video poster="" id="tree" autoplay muted loop style="
-          width: 1200px;
-          height: auto;  /* 设置固定高度 */
-          object-fit: cover;  /* 覆盖模式,会裁剪掉多余部分 */
-          object-position: center;  /* 居中裁剪 */
+        <video poster="" id="tree" controls style="
+          width: 800px;
+          height: auto;
+          object-fit: cover;
+          object-position: center;
+          margin: 0 auto;
+          display: block;
         ">
-          <source src="static/videos/ChatVLADemoForWeb.mp4" type="video/mp4">
+          <source src="static/videos/ChatVLADemoForWeb_h264.mp4" type="video/mp4">
         </video>
 <!--        <img src="static/images/chatvla_framework_1.jpg" alt="teaser" style="-->
 <!--          width: auto;           -->
@@ -302,7 +304,7 @@ const videoData = {
         </div>
         <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
-            <source src="/static/videos/long-horizon/2_1.mp4" type="video/mp4">
+            <source src="/static/videos/long-horizon/2_1_h264.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -321,7 +323,7 @@ const videoData = {
         </div>
         <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
-            <source src="/static/videos/long-horizon/3_1.mp4" type="video/mp4">
+            <source src="/static/videos/long-horizon/3_1_h264.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -339,7 +341,7 @@ const videoData = {
         </div>
         <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
-            <source src="/static/videos/long-horizon/4_1.mp4" type="video/mp4">
+            <source src="/static/videos/long-horizon/4_1_h264.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -371,7 +373,7 @@ const videoData = {
         </div>
         <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
-            <source src="/static/videos/compo/2.mp4" type="video/mp4">
+            <source src="/static/videos/compo/2_h264.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -391,7 +393,7 @@ const videoData = {
         </div>
         <div class="column is-5">
           <video width="100%" height="100%" controls controlsList="nodownload" autoplay muted loop>
-            <source src="/static/videos/compo/1.mp4" type="video/mp4">
+            <source src="/static/videos/compo/1_h264.mp4" type="video/mp4">
           </video>
         </div>
       </div>
